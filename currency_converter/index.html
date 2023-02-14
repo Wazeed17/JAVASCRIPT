@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Currency Converter</title>
+    </head>
+    <body>
+
+        <div>
+            <h1>Currency Converter</h1>
+        </div>
+        <div>
+            <input type="text" id="input_currency" >
+            <select name="" class="currency"></select>
+        </div>
+        <div>
+            <input type="text"  id="output_currency">
+            <select name="" class="currency"></select>
+        </div>
+        <button>convert</button>
+        <script src="./country-list.js" ></script>
+        <script>
+            const select = document.querySelectorAll('.currency');
+            for (let i=0; i<select.length; i++){
+                for (currency_code in country_code ){
+                
+                    // creating a option tag with passing currency code as a text and value
+                    let optionTag = '<option value="${currency_code}">${currency_code}</option>';
+                    // inserting options tag inside select tag
+                     select[i].insertAdjacentHTML("beforeend", optionTag);
+                }
+            }
+
+
+            /* var select = document.querySelectorAll('.currency'),
+                input_currency = document.getElementById('input_currency'),
+                output_currency= document.getElementById('output_currency') */
+        </script>
+    </body>
+</html>
